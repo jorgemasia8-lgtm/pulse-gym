@@ -1,1 +1,0 @@
-import {getAll} from './db.js'; export async function sessions(){return (await getAll('sessions')).sort((a,b)=>b.startedAt-a.startedAt)} export const dateLabel=iso=>new Intl.DateTimeFormat('es-ES',{day:'numeric',month:'short',year:'numeric'}).format(new Date(iso)); export const duration=s=>`${Math.floor(s/60)} min`;
